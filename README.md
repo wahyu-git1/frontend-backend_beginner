@@ -1,9 +1,9 @@
 dalam kode ini mempunyai frontend yaitu di folder public/index.js dan backend di server.js
 
 use technology 
-1. node.js </br> <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" width="500"/>
-2. express </br> <img src="https://miro.medium.com/v2/resize:fit:700/1*XP-mZOrIqX7OsFInN2ngRQ.png" width="50"/>
-3. nodemon </br> <img src="https://static-00.iconduck.com/assets.00/nodemon-icon-1800x2048-cec0ndk1.png" width="50"/>
+1. node.js </br> <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" width="80"/>
+2. express </br> <img src="https://miro.medium.com/v2/resize:fit:700/1*XP-mZOrIqX7OsFInN2ngRQ.png" width="80"/>
+3. nodemon </br> <img src="https://static-00.iconduck.com/assets.00/nodemon-icon-1800x2048-cec0ndk1.png" width="80"/>
  
 <h1>penjelasannya front-end</h1>
 1. menetapkan eventlistener sehingga nanti ketika btnGet atau btnPost ditekan akan menuju ke getInfo atau posInnfo
