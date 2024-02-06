@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="input">
+        <button id="get">GET</button>
+        <button id="post">POST</button>
+
+    </form>
+
+    <script>
+        const getBtn = document.getElementById('get')
+        const postBtn = document.getElementById('post')
+        const input = document.getElementById('input')
+  
+        const baseUrl = 'http://localhost:8000/'
+
+        getBtn.addEventListener ('click', getInfo)
+        postBtn.addEventListener ('click', postInfo)
+
+        // get
+        async function getInfo(e){
+            e.preventDefault() //stop refresshing
+            const res = await fetch (baseUrl + 'info/james?key=hello',  //responn dari server akan disimpan di variabel res
+            {
+                method : 'GET'
+            })
+            console.log(res)  //mencetak res di console 
+            const data = await res.json() 
+            input.value = data.info
+        }
+
+
+        //post 
+        async function postInfo(e){
+            e.preventDefault() //stop refresshing
+            if (input.value == '') {return}
+            const res = await fetch (baseUrl, 
+            {
+                method : 'POST',
+                headers :{
+                    "Content-type": 'application/json'},
+                body : JSON.stringify({
+                    parcel:input.value
+                })
+            })
+           
+        }
+
+    </script>
+    
+</body>
+</html>
